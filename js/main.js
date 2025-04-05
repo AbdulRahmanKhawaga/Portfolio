@@ -1,3 +1,20 @@
+//side-menu
+document.addEventListener('DOMContentLoaded', function() {
+    const hamburger = document.querySelector('.side-menu');
+    const navLinks = document.querySelector('.nav-links');
+    
+    hamburger.addEventListener('click', function() {
+      navLinks.classList.toggle('active');
+    });
+    
+    // Close menu when clicking on a link
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', function() {
+        navLinks.classList.remove('active');
+      });
+    });
+  });
+  
 //active link
 document.addEventListener("DOMContentLoaded", function () {
     const links = document.querySelectorAll(".nav-links a");
@@ -110,3 +127,4 @@ window.addEventListener('load', function () {
     window.scrollTo(0, 0);
     }, 0);
 });
+

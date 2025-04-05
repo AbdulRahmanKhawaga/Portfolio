@@ -49,6 +49,62 @@ nav{
     color: white;
     border-radius: 5px;
 }
+
+.side-menu {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.side-menu span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: #A53DFF;
+    border-radius: 10px;
+}
+
+  /* Responsive styles */
+@media screen and (max-width: 768px) {
+    nav {
+    justify-content: space-between;
+    padding: 20px 5%;
+}
+    
+    .side-menu {
+    display: flex;
+    z-index: 101;
+}
+    
+    .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 50%;
+    height: 100vh;
+    background-color: white;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+}
+    
+    .nav-links.active {
+    right: 0;
+}
+    
+    .nav-links a {
+    margin: 10px 0;
+    }
+}
+
+
+
+
 .wrapper{
     display: flex;
     flex-direction: column;
@@ -257,6 +313,9 @@ border-radius: 50%;
     padding-right: 10px;
     color: white;
 }
+
+
+
 .work-process{
     background-color: #F0F1F3;
     padding-top: 200px;
@@ -420,7 +479,10 @@ transform: translateY(-2px);
     background-color: #8a33d6;
     transform: translateY(-2px);
 }
-.ideas{
+
+
+  
+  .ideas{
     background-color: #132238;
     width: 100%;
     display: flex;
@@ -560,14 +622,10 @@ transform: translateY(-2px);
     border-radius: 5px;
   }
   
-  @media (max-width: 1150px) {
-    .carousel-slide {
-      justify-content: center;
-    }
-  }
-  /* dd */
-  
-.services{
+
+ 
+ 
+  .services{
     background-color: #E6E8EB;
     display: flex;
     flex-direction: row;
@@ -655,7 +713,6 @@ margin-left:200px;
     height: 90px;
     border-radius: 50%;
 }
-
 .skills{
     display: flex;
     flex-direction: column;
@@ -665,20 +722,21 @@ margin-left:200px;
     gap: 100px;
     background-image: linear-gradient(37deg, #fcd3f8 0%, #ffffff 19%, #ffffff 39%, #ffffff 60%, #ffffff 80%, #c4e1f5 100%);
 }
-.skills h1{
+.skills h1 {
     color: #132238;
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 700;
-    padding-top: 50px;
+    margin: 50px;
 }
 .skills-img{
-    width: 60%;
+    width:90%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 100px;
+    max-width: 1200px;
 }
 .skill{
     display: flex;
@@ -687,6 +745,7 @@ margin-left:200px;
     gap: 50px;
     align-items: center;
     align-content: center;
+    text-align: center;
 }
 .skill img{
     width:85px;
@@ -695,6 +754,7 @@ margin-left:200px;
 .skill h2{
     color: #424E60;
 }
+
 .discuss{
     display: flex;
     justify-content: center;
@@ -713,10 +773,12 @@ margin-left:200px;
     background-color: rgb(253, 253, 253);
     padding: 50px;
     gap: 50px;
+    width: 85%;
 }
 .contact-info{
     display:flex;
     flex-direction: column;
+    width: 40%;
 }
 .contact-info h1{
     color: #132238;
@@ -819,6 +881,7 @@ margin-left:200px;
     color: #8a33d6;
     font-size: 2rem;
     margin: 20px;
+    padding-right: 55px;
 }
 .phone .add{
     display: flex;
@@ -847,13 +910,16 @@ margin-left:200px;
     border-radius: 5px;
     margin-top: 40px;
     transition: all 0.5 ease-in-out;
+    width: 100%;
+}
+.contact-info .social-accounts .social-icon i{
+    font-size: 2rem;
 }
 .contact-info .social-accounts:hover{
     outline: 1px solid #8a33d6;
     cursor: pointer;
 }
-.contact-info .social-accounts a:hover{
-    /* outline: 1px solid #999999; */
+.contact-info .social-accounts a i:hover{
     background-color: #fcd3f8;
     border-radius: 50%;
     cursor: pointer;
@@ -862,10 +928,12 @@ margin-left:200px;
 .contact-form{
     display: flex;
     flex-direction: column;
-    margin-left: 40px;
+    margin-left: 20px;
+    margin-top: 80px;
 }
 .contact-form p{
     color: #87909D;
+    font-size: 1.5rem;
     font-weight: 500;
     margin-bottom: 15px;
 }
@@ -873,20 +941,21 @@ margin-left:200px;
 .contact-form input{
     border: none;
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-    width: 80%;
+    width: 90%;
     margin-bottom:10px;
     height: 50px;
     padding: 10px;
+    background-color: rgb(253, 253, 253);
 }
 .bud-sub{
     display: flex;
     gap: 20px;
 }
 #budget{
-    width: 30%;
+    width: 35%;
 }
 #sub{
-    width:46%
+    width:50%
 }
 input:focus{
     outline: none;
@@ -908,6 +977,8 @@ input:focus::placeholder {
     border-radius: 6px;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
+    margin-top: 10px;
+    margin-left: 120px;
 }
 .contact-form i{
     color:white;
@@ -918,20 +989,30 @@ input:focus::placeholder {
 }
 
 
-footer{
+footer {
     background-color: #132238;
-    padding:165px 50px 100px 50px;
+    padding: 165px 50px 100px 50px;
     color: white;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
-footer .nav-links a,#copyrights{
-    color:white;
+
+footer .nav-links {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
 }
-#scrollBtn{
-    width:60px;
-    height:60px;
+
+footer .nav-links a,
+#copyrights {
+    color: white;
+    
+}
+#scrollBtn {
+    width: 60px;
+    height: 60px;
     background-color: #A53DFF;
     border: none;
     color: white;
@@ -939,18 +1020,972 @@ footer .nav-links a,#copyrights{
     border-radius: 50%;
     position: fixed;
     bottom: 20px;
-    right:20px;
-    display:none;
+    right: 20px;
+    display: none;
     font-size: 18px;
     cursor: pointer;
     transition: 0.3s ease-in-out;
+    z-index: 1000;
 }
 
-
 #scrollBtn i {
-    color: white; 
+    color: white;
 }
 
 #scrollBtn:hover {
     background-color: #8a33d6;
 }
+
+
+/* Keep your existing CSS */
+
+ 
+
+/* 1. Extra small devices (phones, less than 576px) */
+@media (max-width: 575.98px) {
+    .wrapper {
+        gap: 30px;
+    }
+    
+    .hero {
+        margin-top: 130px;
+        height: auto;
+        flex-direction: column-reverse;
+        gap: 30px;
+        padding: 0 15px;
+    }
+    
+    .info {
+        width: 100%;
+        gap: 2rem;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .personal-info h1 {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+    }
+    
+    .personal-info p {
+        font-size: 0.9rem;
+        margin-bottom: 18px;
+    }
+    
+    .personal-info button {
+        padding: 12px;
+        font-size: 0.9rem;
+    }
+    
+    .no-projects {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+    
+    .no-projects .box {
+        padding: 0.8rem 1rem;
+        width: 80%;
+        border-radius: 5px;
+        margin-bottom: 8px;
+    }
+    
+    .no-projects .box:first-child,
+    .no-projects .box:last-child {
+        border-radius: 5px;
+    }
+    
+    .no-projects .box h3 {
+        font-size: 1.3rem;
+    }
+    
+    .personal-image {
+        width: 220px;
+        height: 280px;
+    }
+    
+    .description {
+        width: 90%;
+        padding: 25px;
+        gap: 25px;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-bottom: -50px;
+    }
+    
+    .left-pic {
+        width: 200px;
+        height: 260px;
+    }
+    
+    .social-accounts {
+        width: 160px;
+        gap: 10px;
+    }
+    
+    .social-icon i {
+        font-size: 16px;
+        padding: 6px;
+    }
+    
+    .description-header {
+        font-size: 1.5rem;
+        line-height: 1.8rem;
+        margin-bottom: 15px;
+    }
+    
+    .description-p {
+        font-size: 0.9rem;
+        margin-bottom: 20px;
+    }
+    
+    .right-side .buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        align-items: center;
+    }
+    
+    .right-side .buttons button {
+        width: 180px;
+        padding: 12px;
+        font-size: 0.9rem;
+    }
+    .work-process {
+        padding-top: 100px;
+        height: auto;
+        padding-bottom: 50px;
+        padding-left: 20px;
+        padding-right: 20px;
+        gap: 30px;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .left {
+        width: 100%;
+        margin-top: 0;
+        text-align: center;
+    }
+    
+    .left h2 {
+        font-size: 1.6rem;
+        margin-bottom: 12px;
+    }
+    
+    .left p {
+        font-size: 0.95rem;
+    }
+    
+    .right {
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    
+    .right div {
+        width: 90%;
+        max-width: 280px;
+        height: auto;
+        min-height: 200px;
+        padding: 20px;
+        margin: 8px 0;
+    }
+    
+    .right div img {
+        margin-bottom: 12px;
+        width: 50px;
+    }
+    
+    .right div h3 {
+        font-size: 1.1rem;
+    }
+    
+    .right div p {
+        font-size: 0.9rem;
+    }
+    
+    #box1, #box2, #box3, #box4 {
+        margin-top: 0;
+    }
+    .blog{
+        height: auto;
+    }
+   /* Skills Section */
+   .skills {
+    gap: 30px;
+}
+
+.skills h1 {
+    font-size: 1.8rem;
+    margin: 25px;
+}
+
+.skills-img {
+    gap: 30px;
+}
+
+.skill {
+    gap: 15px;
+    width: 40%;
+}
+
+.skill img {
+    width: 50px;
+    height: 50px;
+}
+
+.skill h2 {
+    font-size: 1rem;
+}
+
+/* Contact Section */
+.contact {
+    flex-direction: column;
+    padding: 25px 15px;
+    width: 90%;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: -50px;
+}
+
+.contact-info {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+}
+
+.contact-info h1 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+
+.contact-info p {
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+}
+
+.address, .email, .phone {
+    width: 100%;
+    margin-bottom: 10px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.4);
+}
+
+.address i, .email i {
+    font-size: 1.3rem;
+}
+
+.address .add h3, .email .add h3, .phone .add h3 {
+    font-size: 0.9rem;
+}
+
+.address .add p, .email .add p, .phone .add p {
+    font-size: 0.9rem;
+}
+
+.phone i {
+    margin: 10px;
+    padding-right: 15px;
+    font-size: 1.3rem;
+}
+
+.contact-info .social-accounts {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    gap: 10px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.4);
+}
+
+.contact-info .social-accounts .social-icon i {
+    font-size: 1.3rem;
+}
+
+.contact-form {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 10px;
+    align-items: center;
+}
+
+.contact-form p {
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.contact-form input {
+    width: 100%;
+    height: 45px;
+    margin-bottom: 8px;
+}
+
+.bud-sub {
+    width: 100%;
+    flex-direction: column;
+    gap: 0;
+}
+
+#budget, #sub {
+    width: 100%;
+}
+
+.contact-form button {
+    margin-left: 0;
+    width: 130px;
+    height: 45px;
+    font-size: 0.9rem;
+}
+
+/* Footer */
+footer {
+    padding: 100px 15px 30px 15px;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+}
+
+footer .logo img {
+    max-width: 120px;
+}
+
+footer .nav-links {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 15px 0;
+    gap: 10px;
+}
+
+#copyrights {
+    font-size: 0.8rem;
+}
+
+#scrollBtn {
+    width: 45px;
+    height: 45px;
+    font-size: 14px;
+    bottom: 15px;
+    right: 15px;
+}
+}
+
+  
+  /* 2. Small devices (phones ≥576px and <768px) */
+  @media (min-width: 576px) and (max-width: 767.98px) {
+   
+    .wrapper {
+        gap: 40px;
+    }
+    
+    .hero {
+        margin-top: 140px;
+        height: auto;
+        flex-direction: column-reverse;
+        gap: 40px;
+        padding: 0 20px;
+    }
+    
+    .info {
+        width: 100%;
+        gap: 2.5rem;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .personal-info h1 {
+        font-size: 2.2rem;
+    }
+    
+    .personal-info p {
+        font-size: 1rem;
+    }
+    
+    .no-projects {
+        justify-content: center;
+    }
+    
+    .no-projects .box {
+        padding: 0.8rem 1.2rem;
+    }
+    
+    .no-projects .box h3 {
+        font-size: 1.4rem;
+    }
+    
+    .personal-image {
+        width: 260px;
+        height: 340px;
+    }
+    
+    .description {
+        width: 90%;
+        padding: 30px;
+        gap: 30px;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .left-pic {
+        width: 240px;
+        height: 300px;
+    }
+    
+    .social-accounts {
+        width: 180px;
+    }
+    
+    .description-header {
+        font-size: 1.8rem;
+        line-height: 2.2rem;
+    }
+    
+    .description-p {
+        font-size: 1rem;
+    }
+    
+    .right-side .buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+    
+    .right-side .buttons button {
+        width: 200px;
+    }
+    .work-process {
+        padding-top: 220px;
+        height: auto;
+        padding-bottom: 60px;
+        padding-left: 30px;
+        padding-right: 30px;
+        gap: 40px;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .left {
+        width: 100%;
+        margin-top: 0;
+        text-align: center;
+    }
+    
+    .left h2 {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+    }
+    
+    .left p {
+        font-size: 1rem;
+    }
+    
+    .right {
+        justify-content: center;
+        width: 100%;
+    }
+    
+    .right div {
+        width: 220px;
+        height: 240px;
+        padding: 20px;
+        margin: 8px;
+    }
+    
+    .right div img {
+        margin-bottom: 15px;
+        width: 60px;
+    }
+    
+    .right div h3 {
+        font-size: 1.1rem;
+    }
+    
+    .right div p {
+        font-size: 0.9rem;
+    }
+    
+    #box1, #box2, #box3, #box4 {
+        margin-top: 0;
+    }
+    .blog{
+        height: auto;
+    }
+    .services{
+        flex-direction: column;
+        align-content: flex-start;
+        align-items: flex-start;
+        padding: 40px 0;
+    }
+    .services-l{
+        align-items: center;
+        margin-left: 130px;
+    }
+    .service-item img{
+        width: 60px;
+        height: 60px;
+    }
+    .contact-info .phone i{
+        margin-right: 80px;
+        padding-left:40px ;
+    }
+      .skills {
+        gap: 40px;
+    }
+    
+    .skills h1 {
+        font-size: 2rem;
+        margin: 30px;
+    }
+    
+    .skills-img {
+        gap: 40px;
+    }
+    
+    .skill {
+        gap: 20px;
+    }
+    
+    .skill img {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .skill h2 {
+        font-size: 1.2rem;
+    }
+    
+    /* Contact Section */
+    .contact {
+        flex-direction: column;
+        padding: 30px;
+        width: 90%;
+        align-items: center;
+        margin-bottom: -60px;
+    }
+    
+    .contact-info {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .contact-info h1 {
+        font-size: 1.6rem;
+        margin-bottom: 20px;
+    }
+    
+    .contact-info p {
+        font-size: 1rem;
+        margin-bottom: 15px;
+    }
+    
+    .address, .email, .phone {
+        width: 100%;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+    }
+    
+    .address i, .email i {
+        font-size: 1.5rem;
+    }
+    
+    .phone i {
+        margin: 12px;
+        padding-right: 25px;
+        font-size: 1.5rem;
+    }
+    
+    .contact-info .social-accounts {
+        width: 100%;
+        margin-top: 25px;
+        margin-bottom: 15px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+    }
+    
+    .contact-info .social-accounts .social-icon i {
+        font-size: 1.5rem;
+    }
+    
+    .contact-form {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 20px;
+        align-items: center;
+    }
+    
+    .contact-form p {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+    
+    .contact-form input {
+        width: 100%;
+    }
+    
+    .bud-sub {
+        width: 100%;
+        gap: 10px;
+    }
+    
+    #budget {
+        width: 40%;
+    }
+    
+    #sub {
+        width: 55%;
+    }
+    
+    .contact-form button {
+        margin-left: 0;
+        height: 50px;
+    }
+    
+    /* Footer */
+    footer {
+        padding: 120px 20px 40px 20px;
+        flex-direction: column;
+        gap: 25px;
+        text-align: center;
+    }
+    
+    footer .logo img {
+        max-width: 150px;
+    }
+    
+    footer .nav-links {
+        justify-content: center;
+        margin: 15px 0;
+        gap: 15px;
+    }
+    
+    #copyrights {
+        font-size: 0.9rem;
+    }
+  }
+  
+  /* 3. Medium devices (tablets ≥768px and <992px) */
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    .wrapper {
+        gap: 60px;
+    }
+    
+    .hero {
+        margin-top: 50px;
+        height: auto;
+        gap: 50px;
+        flex-direction: row;
+        padding: 0 20px;
+    }
+    
+    .info {
+        width: 50%;
+        gap: 3rem;
+    }
+    
+    .personal-info h1 {
+        font-size: 2.3rem;
+    }
+    
+    .personal-info p {
+        font-size: 1rem;
+    }
+    
+    .no-projects {
+        flex-direction: row;
+        width: 100%;
+    }
+    
+    .no-projects .box {
+        padding: 1rem 1.5rem;
+    }
+    
+    .no-projects .box h3 {
+        font-size: 1.5rem;
+    }
+    
+    .personal-image {
+        width: 280px;
+        height: 360px;
+    }
+    
+    .description {
+        width: 90%;
+        padding: 40px;
+        gap: 40px;
+        flex-direction: row;
+    }
+    
+    .left-pic {
+        width: 220px;
+        height: 280px;
+    }
+    
+    .description-header {
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
+    
+    .description-p {
+        font-size: 1rem;
+    }
+    
+    .right-side .buttons {
+        display: flex;
+        gap: 10px;
+    }
+    .work-process {
+        padding-top: 150px;
+        height: auto;
+        padding-bottom: 80px;
+        padding-left: 40px;
+        padding-right: 40px;
+        gap: 50px;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .left {
+        width: 90%;
+        margin-top: 0;
+        text-align: center;
+    }
+    
+    .left h2 {
+        font-size: 2rem;
+    }
+    
+    .left p {
+        font-size: 1.1rem;
+    }
+    
+    .right {
+        justify-content: center;
+        width: 100%;
+    }
+    
+    .right div {
+        width: 230px;
+        height: 250px;
+        padding: 25px;
+    }
+    
+    #box1, #box2, #box3, #box4 {
+        margin-top: 0;
+    }
+    
+    #box2 {
+        margin-top: 30px;
+    }
+    
+    #box3 {
+        margin-top: 0;
+    }
+    
+    #box4 {
+        margin-top: 30px;
+    }
+    .skills {
+        gap: 60px;
+    }
+    
+    .skills h1 {
+        font-size: 2.2rem;
+        margin: 40px;
+    }
+    
+    .skills-img {
+        gap: 50px;
+    }
+    
+    .skill {
+        gap: 30px;
+    }
+    
+    .skill img {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .skill h2 {
+        font-size: 1.3rem;
+    }
+    
+    /* Contact Section */
+    .contact {
+        flex-direction: column;
+        padding: 40px;
+        width: 90%;
+        align-items: center;
+    }
+    
+    .contact-info {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .contact-info h1 {
+        font-size: 1.8rem;
+        margin-bottom: 25px;
+    }
+    
+    .contact-info p {
+        font-size: 1.1rem;
+        margin-bottom: 20px;
+    }
+    
+    .address, .email, .phone {
+        width: 90%;
+        max-width: 500px;
+    }
+    
+    .phone i {
+        margin: 15px;
+        padding-right: 35px;
+    }
+    
+    .contact-info .social-accounts {
+        width: 90%;
+        max-width: 500px;
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+    
+    .contact-info .social-accounts .social-icon i {
+        font-size: 1.8rem;
+    }
+    
+    .contact-form {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 30px;
+        align-items: center;
+    }
+    
+    .contact-form p {
+        font-size: 1.3rem;
+        text-align: center;
+    }
+    
+    .contact-form input {
+        width: 90%;
+    }
+    
+    .bud-sub {
+        width: 90%;
+    }
+    
+    .contact-form button {
+        margin-left: 0;
+    }
+    
+    /* Footer */
+    footer {
+        padding: 150px 30px 50px 30px;
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+    }
+    
+    footer .nav-links {
+        justify-content: center;
+        margin: 20px 0;
+    }
+}
+  
+  /* 4. Large devices (desktops ≥992px and <1200px) */
+  @media (min-width: 992px) and (max-width: 1199.98px) {
+    header{
+        max-width: 1200px;    
+    }
+    .wrapper{
+        width: 100%;
+    }
+    .hero{
+        margin-top:180px;
+        max-width: 100%;
+        padding: 50px;
+    }
+    .personal-info h1{
+        font-size: 2rem;
+    }
+    .description{
+        margin-top: 80px;
+        width: 70%;
+        gap: 60px;
+        padding: 50px;
+    }
+    .left-pic{
+        width: 220px;
+        height: 250px;
+        margin-top: 200px;
+    }
+    .description-p{
+        width: 100%;
+        font-size: 1.2rem;
+    }
+    .work-process{
+        width: 100%;
+        gap: 10px;
+        padding: 200px 0 0 100px;
+    }
+    .work-process .left{
+        width: 50%;
+    }
+    #box1,#box2,#box3,#box4{
+        width: 250px;
+        padding: 20px;
+        height: 240px;
+    }
+    #box3{
+        margin-bottom: 130px;
+    }
+    .blog {
+        height: auto;     
+    }
+    .services{
+        gap: 0;
+    }
+    .service-item{
+        width: 400px;
+    }
+    .service-item img{
+        width: 70px;
+        height: 70px;
+    }
+    .contact-info p{
+        font-size:0.9rem ;
+    }
+    footer{
+        justify-content: center;
+        align-content: center;
+    }
+  
+}  
+  /* 5. Extra large devices (large desktops ≥1200px) */
+  @media (min-width: 1200px) {
+    
+    .hero{
+        margin-top:80px;
+        width: 100%;
+        padding: 50px;
+    }
+    .description{
+        margin-top: 80px;
+        width: 75%;
+    }
+    .left-pic{
+        margin-top: 50px;
+    }
+    .social-accounts{
+        position: relative;
+        bottom: 50px;
+    }
+    .right-side .buttons button{
+        margin: 10px;
+    }
+    
+  }
+  
