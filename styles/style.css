@@ -5,14 +5,14 @@
     text-decoration: none;
     color: black;
 }
-html, body {
-    overflow-x: hidden;
-    width: 100%;
-}
 
 html{
     scroll-behavior: smooth;
 
+}
+html, body {
+    overflow-x: hidden;
+    width: 100%;
 }
 header{
     width: 100%;
@@ -1041,9 +1041,7 @@ footer .nav-links a,
 }
 
 
-/* Keep your existing CSS */
 
- 
 
 /* 1. Extra small devices (phones, less than 576px) */
 @media (max-width: 575.98px) {
@@ -1052,7 +1050,7 @@ footer .nav-links a,
     }
     
     .hero {
-        margin-top: 130px;
+        margin-top: 110px;
         height: auto;
         flex-direction: column-reverse;
         gap: 30px;
@@ -1104,8 +1102,8 @@ footer .nav-links a,
     }
     
     .personal-image {
-        width: 220px;
-        height: 280px;
+        width: 170px;
+        height: 190px;
     }
     
     .description {
@@ -1119,12 +1117,13 @@ footer .nav-links a,
     }
     
     .left-pic {
-        width: 200px;
-        height: 260px;
+        width: 180px;
+        height: 220px;
     }
     
     .social-accounts {
-        width: 160px;
+        width: 140px;
+        height: 40;
         gap: 10px;
     }
     
@@ -1213,14 +1212,74 @@ footer .nav-links a,
     
     #box1, #box2, #box3, #box4 {
         margin-top: 0;
+        width: 200px;
+        height: 210px;
+        margin-bottom: 15px;
+    }
+    .section-header{
+        text-align: center;
+    }
+    .card{
+        width: auto;
+        height: auto;
+        text-align: center;
+    }
+    .card-image{
+        height: 45%;
+    }
+    .card-image img{
+        width: 100%;
+        height: 100%;
+    }
+    
+    .ideas{
+        text-align: center;
+    }
+    .ideas h1{
+        font-size: 1.2rem;
+        line-height: normal;
+    }
+    .ideas button{
+        width: 230px;
     }
     .blog{
         height: auto;
     }
-   /* Skills Section */
+    .carousel-slide {
+       flex-direction: column;
+    }
+    .carousel-item{
+        width: auto;
+    }
+    .services{
+        display: flex;
+        flex-direction: column;
+
+        width: auto;
+        gap: 0;
+        padding: 20px;
+    }
+    .service-item{
+        font-size: 0.7rem;
+        width: 280px;
+        height: 60px;
+        margin-left: 10px;
+    }
+    .services-l{
+        text-align: center;
+        margin-left: 0;
+        margin-bottom: 20px;
+    }
+    .services-l button{
+        height: 45px;
+    }
+    .service-item img{
+        width: 50px;
+        height: 50px;
+    }
    .skills {
     gap: 30px;
-}
+    }
 
 .skills h1 {
     font-size: 1.8rem;
@@ -1265,7 +1324,6 @@ footer .nav-links a,
     font-size: 1.4rem;
     margin-bottom: 15px;
 }
-
 .contact-info p {
     font-size: 0.9rem;
     margin-bottom: 12px;
@@ -1297,7 +1355,7 @@ footer .nav-links a,
 
 .contact-info .social-accounts {
     width: 100%;
-    margin-top: 20px;
+    margin-top: 30px;
     margin-bottom: 10px;
     gap: 10px;
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.4);
@@ -1336,10 +1394,11 @@ footer .nav-links a,
 }
 
 .contact-form button {
-    margin-left: 0;
-    width: 130px;
-    height: 45px;
+    margin-left: 30px;
+    width: 110px;
+    height: 40px;
     font-size: 0.9rem;
+    padding: 10px;
 }
 
 /* Footer */
@@ -1676,7 +1735,7 @@ footer .nav-links {
     }
     
     .hero {
-        margin-top: 50px;
+        margin-top: 130px;
         height: auto;
         gap: 50px;
         flex-direction: row;
@@ -1790,6 +1849,42 @@ footer .nav-links {
     #box4 {
         margin-top: 30px;
     }
+
+    .section-header{
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    .card{
+        height: 430px;
+    }
+    .card-image{
+        height: 45%;
+    }
+    .card-image img{
+        width: 100%;
+        height: 100%;
+    }
+    .blog{
+        height: auto;
+    }
+    .services{
+        justify-content: center;
+        gap: 20px;
+        padding: 40px 20px;
+    }
+    .service-item{
+        width: 500px;
+        height: 90px;
+    }
+    .services-l{
+        width: 30%;
+        margin-left: 20px;
+    }
+    .service-item img{
+        width: 70px;
+        height: 70px;
+    }
+    
     .skills {
         gap: 60px;
     }
@@ -1815,7 +1910,9 @@ footer .nav-links {
     .skill h2 {
         font-size: 1.3rem;
     }
-    
+    .more-btn{
+        margin-left: 210px;
+    }
     /* Contact Section */
     .contact {
         flex-direction: column;
@@ -1881,9 +1978,7 @@ footer .nav-links {
         width: 90%;
     }
     
-    .contact-form button {
-        margin-left: 0;
-    }
+
     
     /* Footer */
     footer {
@@ -1921,10 +2016,13 @@ footer .nav-links {
         gap: 60px;
         padding: 50px;
     }
+    .left-side{
+        justify-content: center;
+    }
     .left-pic{
         width: 220px;
         height: 250px;
-        margin-top: 200px;
+        margin-top: 150px;
     }
     .description-p{
         width: 100%;
@@ -1946,14 +2044,31 @@ footer .nav-links {
     #box3{
         margin-bottom: 130px;
     }
+    .section-header{
+        text-align: center;
+    }
+    .card-image{
+        height: 45%;
+    }
+    .card-image img{
+        width: 100%;
+        height: 100%;
+    }
+    .more-btn{
+        margin-left: 340px;
+    }
     .blog {
         height: auto;     
     }
     .services{
         gap: 0;
+        padding: 30px;
+    }
+    .services-l{
+        margin-left: 100px;
     }
     .service-item{
-        width: 400px;
+        width: 500px;
     }
     .service-item img{
         width: 70px;
@@ -1961,6 +2076,15 @@ footer .nav-links {
     }
     .contact-info p{
         font-size:0.9rem ;
+    }
+    .address i{
+        padding-left: 5px;
+    }
+    .email i{
+        padding-left: 10px;
+    }
+    .phone i{
+        padding-right: 0;
     }
     footer{
         justify-content: center;
@@ -1972,7 +2096,7 @@ footer .nav-links {
   @media (min-width: 1200px) {
     
     .hero{
-        margin-top:80px;
+        margin-top:170px;
         width: 100%;
         padding: 50px;
     }
@@ -1985,11 +2109,36 @@ footer .nav-links {
     }
     .social-accounts{
         position: relative;
-        bottom: 50px;
+        bottom: 30px;
     }
     .right-side .buttons button{
         margin: 10px;
     }
-    
+    .section-header{
+        text-align: center;
+        padding-bottom: 30px;
+    }
+    .card{
+        height: 440px;
+    }
+    .card-image{
+        height: 45%;
+    }
+    .card-image img{
+        width: 100%;
+        height: 100%;
+    }
+    .services{
+        padding: 35px;
+    }
+    .more-btn{
+        margin-left: 550px;
+    }
+    .contact-info .social-accounts {
+    margin-top: 50px;
+    }
+    .phone i{
+        padding-right: 0;
+    }
   }
   
